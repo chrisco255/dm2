@@ -1,0 +1,135 @@
+
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1 class="hero-text-shadow">doc-man</h1>
+    <!--<h1 class="hero-text-top">doc-man</h1>-->
+    <!--<p class="lead">ALL YOUR DOCS ARE BELONG TO US.</p>-->
+    <!--<p class="lead">Press Start</p><p class="logo-button">
+    <button class="button button-3d button-caution button-circle button-ginormous"></button>
+  </p>-->
+  </div>
+</header>
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+          <h2>Store and Share Any File With a Dot</h2>
+          <h4>Doc-Man loves .doc, .png, .pdf, etc...</h4>
+          <div class="hero-image"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <div ng-show="!main.isLoggedIn()" class="well">
+        <h2>Welcome Back!</h2>
+        <p>Default account is <code>test@test.com</code> / <code>test</code></p>
+        <form class="form" name="form" ng-submit="main.login(form)" novalidate>
+
+          <div class="form-group">
+            <label>Email</label>
+
+            <input type="email" name="email" class="form-control" ng-model="user.email" required>
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+
+            <input type="password" name="password" class="form-control" ng-model="user.password" required>
+          </div>
+
+          <div class="form-group has-error">
+            <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
+              Please enter your email and password.
+            </p>
+            <p class="help-block" ng-show="form.email.$error.email && submitted">
+              Please enter a valid email.
+            </p>
+
+            <p class="help-block">{{ errors.other }}</p>
+          </div>
+
+          <div>
+            <button class="btn btn-inverse btn-lg btn-login" type="submit">
+              Login
+            </button>
+            <a class="btn btn-default btn-lg btn-register" href="/signup">
+              Register
+            </a>
+          </div>
+
+        </form>
+      </div>
+      <div ng-show="main.isLoggedIn()" class="well">
+        <h2>Hello, {{ main.getCurrentUser().name }}</h2>
+        <p>You're logged in! Please go to dashboard to manage your docs.</p>
+        <p>
+          <a class="button button-medium button-caution">Go To Dashboard</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <hr>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="jumbotron">
+
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <div class="feature-image ghosts"></div>
+          </div>
+          <div class="col-sm-12 col-md-8">
+            <h2>One Click Sharing With Friends</h2>
+            <p>We call it InstaShare.  It's our one-click button for instantly sharing a document with friends.  Your friends will get push notified that you've published a document.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="jumbotron">
+
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <div class="feature-image meteor"></div>
+          </div>
+          <div class="col-sm-12 col-md-8">
+            <h2>Publish Directly To Social Media</h2>
+            <p>You want integrations?  We've got integrations. Share your docs instantly on Wordpress, Medium, Blogger, Instagram and more.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="jumbotron">
+
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <div class="feature-image cherry"></div>
+          </div>
+          <div class="col-sm-12 col-md-8">
+            <h2>Cherry Pick Your Shares</h2>
+            <p>We enable fine-grained secure access to your documents. Each file's share permissions can be completely customized. You have full control!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>ALL YOUR DOCS ARE BELONG TO US</p>
+  </div>
+</footer>

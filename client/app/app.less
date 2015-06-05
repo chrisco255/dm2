@@ -1,0 +1,86 @@
+@import 'bootstrap/less/bootstrap.less';
+@import 'font-awesome/less/font-awesome.less';
+@import 'flexbox.less';
+@import 'customgrid.less';
+
+@icon-font-path: '/bower_components/bootstrap/fonts/';
+@fa-font-path: '/bower_components/font-awesome/fonts';
+
+/**
+ * App-wide Styles
+ */
+
+@dm-black: #000;
+@dm-white: #FFF;
+@dm-highlight-color: #FFEE00;
+
+@dm-font-headlines: 'Roboto', Courier, monospace;
+@dm-font-normal: 'Roboto', Arial, sans-serif;
+
+@font-face {
+  font-family: 'crackman';
+  src: url('/assets/fonts/crackman/crackman front.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'crackmanback';
+  src: url('/assets/fonts/crackman/crackman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pacman';
+  src: url('/assets/fonts/pacfont/pac-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pressstart';
+  src: url('/assets/fonts/pressstart/pressstart.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:900,400,300);
+
+h1,h2,h3,h4,h5,h6,label {
+  font-family: @dm-font-headlines;
+  font-weight: 900;
+}
+
+html, body {
+  font-family: @dm-font-normal;
+  color: @dm-black;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  width:100%;
+
+  &.navbar-stuck {
+    position: relative;
+    padding-top: 50px;
+  }
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+// injector
+@import 'account/login/login.less';
+@import 'admin/admin.less';
+@import 'customgrid.less';
+@import 'dashboard/dashboard.less';
+@import 'flexbox.less';
+@import 'main/main.less';
+@import '../components/modal/modal.less';
+@import '../components/navbar/navbar.less';
+// endinjector

@@ -1,0 +1,91 @@
+.thing-form {
+  margin: 20px 0;
+}
+
+#banner {
+    border-bottom: none;
+    margin-top: -20px;
+  overflow: hidden;
+}
+
+.loop(@counter) when (@counter < 150px) {
+  text-shadow+: ((@counter)) ((@counter)) (#e59501);
+  .loop((@counter + 1px));
+}
+
+#banner h1 {
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: -1px;
+  font-family: 'crackman', sans-serif;
+  font-weight: 400;
+  color: @dm-black;
+  .loop(0px);
+
+  &.hero-text-shadow {
+    /*font-family: 'crackmanback';*/
+    /*color: @dm-white;*/
+  }
+
+  &.hero-text-top {
+    position: relative;
+    margin-top: -82px;
+  }
+}
+
+#banner .lead {
+  font-family: 'pressstart', sans-serif;
+}
+
+.hero-unit {
+    position: relative;
+    padding: 30px 15px;
+    color: @dm-white;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    background: @dm-highlight-color;
+
+
+}
+
+.hero-image {
+  height: 200px;
+  background-image: url('/assets/images/pacdoc.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.feature-image {
+  height: 200px;
+  background-image: url('/assets/images/pacdoc.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.ghosts {
+  background-image: url('/assets/images/ghosts.svg');
+}
+
+.cherry {
+  background-image: url('/assets/images/cherry.svg');
+}
+
+.meteor {
+  background-image: url('/assets/images/meteor.svg');
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+
+.footer {
+  background-color: @dm-black;
+  color: @dm-white;
+  font-family: 'pressstart';
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #E5E5E5;
+}
